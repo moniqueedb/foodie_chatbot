@@ -1,0 +1,87 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Hello, thanks for visiting",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?",
+          "Hello, how can I help you today?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "food",
+        "patterns": [
+          "What type of food is on the menu?",
+          "What do you sell?",
+          "I want to order some food.",
+          "I am hungry."
+        ],
+        "responses": [
+          "We sell American food.",
+          "We have a variety of items on our menu"
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+          "Do you take credit cards?",
+          "Do you accept Mastercard?",
+          "Can I pay with Paypal?",
+          "Are you cash only?"
+        ],
+        "responses": [
+          "We only accept VISA and Mastercard",
+          "We accept most major credit cards, and Paypal"
+        ]
+      },
+      {
+        "tag": "delivery",
+        "patterns": [
+          "How long does delivery take?",
+          "How long does shipping take?",
+          "When do I get my delivery?"
+        ],
+        "responses": [
+          "Unfortunately, we do not offer delivery"
+        ]
+      },
+      {
+        "tag": "menu",
+        "patterns": [
+          "What's on the menu?",
+          "What do you sell?",
+          "Do you have a menu?",
+          "What type of food is this?",
+          "I want to order some food."
+        ],
+        "responses": [
+          "Please, have a look at our menu...",
+          "Here is our menu..."
+        ]
+      }
+    ]
+  }
