@@ -2,14 +2,36 @@
 
 This repo currently contains the starter files.
 
-Clone repo and create a virtual environment
+1. Clone repo:
+
 
 $ git clone https://github.com/python-engineer/foodie_chatbot.git
 
-Install dependencies
 
-$ (venv) pip install Flask torch torchvision nltk
-Install nltk package
+2. Create a virtual environment:
+
+$ python -m venv ./venv/
+
+$ source venv/scripts/activate
+
+
+
+3. Install packages
+
+$ pip install flask
+
+$ pip install torch
+
+$ pip install torchvision
+
+$ pip install nltk
+
+4. Run the app.py
+
+$ export FLASK_APP=app.py
+
+$ Flask run
+
 
 $ (venv) python
 >>> import nltk
