@@ -46,7 +46,19 @@
         ]
       },
       {
-        "tag": "payments",
+        "tag": "payment",
+        "patterns": [
+          "Please take me to check out",
+          "How do I checkout?",
+          "Take me to the payment page",
+          "How do I pay?"
+        ],
+        "responses": [
+          "You can make payments online by going to this link (copy and paste into browser): https://buy.stripe.com/test_6oEg1BdZ48vkeUE9AA"
+        ]
+      },
+      {
+        "tag": "paymentmethods",
         "patterns": [
           "Do you take credit cards?",
           "Do you accept Mastercard?",
