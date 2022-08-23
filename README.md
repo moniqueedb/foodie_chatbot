@@ -26,11 +26,13 @@ $ pip install torchvision
 
 $ pip install nltk
 
-4. Run the app.py
 
-$ export FLASK_APP=app.py
+4. Run 
+$ (venv) python train.py
+This will dump data.pth file. And then run the following command to test it in the console.
 
-$ Flask run
+$ (venv) python app.py
+
 
 
 $ (venv) python
@@ -40,7 +42,6 @@ Modify intents.json with different intents and responses for your Chatbot
 
 Run
 
-$ (venv) python train.py
-This will dump data.pth file. And then run the following command to test it in the console.
 
-$ (venv) python app.py
+
+
