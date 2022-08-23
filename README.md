@@ -26,6 +26,11 @@ $ pip install torchvision
 
 $ pip install nltk
 
+$ (venv) python
+>>> import nltk
+>>> nltk.download('punkt')
+Modify intents.json with different intents and responses for your Chatbot
+
 
 4. Run 
 $ (venv) python train.py
@@ -34,13 +39,6 @@ This will dump data.pth file. And then run the following command to test it in t
 $ (venv) python app.py
 
 
-
-$ (venv) python
->>> import nltk
->>> nltk.download('punkt')
-Modify intents.json with different intents and responses for your Chatbot
-
-Run
 
 
 
