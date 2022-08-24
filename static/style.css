@@ -12,7 +12,10 @@ button{
 
 body{
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #e5e5e5;
+	background-image: url("../static/foodie.JPG");
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+	background-position: center;
 	display: flex;
 	justify-content: center;
 	height: 100vh;
