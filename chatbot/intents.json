@@ -1,99 +1,155 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?",
-          "Hello, how can I help you today?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "food",
-        "patterns": [
-          "What type of food is on the menu?",
-          "What do you sell?",
-          "I want to order some food.",
-          "I am hungry."
-        ],
-        "responses": [
-          "We sell American food.",
-          "We have a variety of items on our menu"
-        ]
-      },
-      {
-        "tag": "payment",
-        "patterns": [
-          "Please take me to check out",
-          "How do I checkout?",
-          "Take me to the payment page",
-          "How do I pay?"
-        ],
-        "responses": [
-          "Here's the link: <a href=\"//buy.stripe.com/test_6oEg1BdZ48vkeUE9AA\" target=\"_blank\"><u>Pay by Stripe</u></a>"
-        ]
-      },
-      {
-        "tag": "paymentmethods",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We only accept VISA and Mastercard",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Unfortunately, we do not offer delivery"
-        ]
-      },
-      {
-        "tag": "menu",
-        "patterns": [
-          "What's on the menu?",
-          "What do you sell?",
-          "Do you have a menu?",
-          "What type of food is this?",
-          "I want to order some food."
-        ],
-        "responses": [
-          "Please, have a look at our menu...",
-          "Here is our menu..."
-        ]
-      }
-    ]
-  }
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "What's up?",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?",
+        "Welcome to our restaurant",
+        "How would you like to have?",
+        "Hello, how can I help you today?"
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Have a great day", "Have a nice day", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+
+    {
+      "tag": "hours",
+      "patterns": [
+        "when are you open",
+        "what are your hours",
+        "hours of operation",
+        "When do you open?",
+        "When can I come in today?",
+        "open hours"
+      ],
+      "responses": [
+        "We are open from 11 AM to 9PM on weekdays and 11AM to Midnight on Weekends",
+        "We are open everyday from 11AM to 11PM, Weekends we are open till Midnight"
+      ]
+    },
+
+    {
+      "tag": "location",
+      "patterns": [
+        "where are you located?",
+        "what is your location?",
+        "what is your address?",
+        "how can I get there?"
+      ],
+      "responses": [
+        "We are located at 123 Abc Dr., Novi, MI 49374",
+        "Our address is 123 Abc Dr., Novi, MI 49374"
+      ]
+    },
+
+    {
+      "tag": "payment",
+      "patterns": [
+        "Please take me to check out",
+        "How do I checkout?",
+        "Take me to the payment page",
+        "How do I pay?"
+      ],
+      "responses": [
+        "Here's the payment link: <a href=\"//buy.stripe.com/test_6oEg1BdZ48vkeUE9AA\" target=\"_blank\"><u>Please Pay by Stripe</u></a>"
+      ]
+    },
+
+    {
+      "tag": "paymentmethods",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We only accept VISA and Mastercard",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Unfortunately, we do not offer delivery"
+      ]
+    },
+
+    {
+      "tag": "menu",
+      "patterns": [
+        "What's on the menu?",
+        "What type of food is on the menu?",
+        "What do you sell?",
+        "Do you have a menu?",
+        "What type of food is this?",
+        "I want to order some food.",
+        "I am hungry."
+      ],
+      "responses": [
+        "Please, have a look at our menu: Tacos ($10): Fish/Beef/Vege. Sandwiches ($10): Vege/Beef. Drinks ($2): Beer, Cola, Juice. Sides ($2.5): Fresh Fruit Cup, Potato Salad, Fried Okra.",
+        "Here is our menu: Tacos ($10): Fish/Beef/Vege. Sandwiches ($10): Vege/Beef. Drinks ($2): Beer, Cola, Juice. Sides ($2.5): Fresh Fruit Cup, Potato Salad, Fried Okra."
+      ]
+    },
+
+    {
+      "tag": "vegetarian",
+      "patterns": [
+        "I am a vegetarian.",
+        "What do you have for vegetarian?",
+        "Do you have a vegetarian menu?",
+        "I don't eat meat."
+      ],
+      "responses": [
+        "We have vegetarian menus: Vegetarian Tacos ($10) and Vegetarian Sandwiches ($10)",
+        "Well, you can choose our Vegetarian Taco ($10) or Vegetarian Sandwich ($10)"
+      ]
+    },
+
+    {
+      "tag": "specials",
+      "patterns": [
+        "What do you recommend?",
+        "What's your speciality?",
+        "What are your everyday specials?",
+        "What is today's specials?"
+      ],
+      "responses": [
+        "Today's specials are Fish Tacos, Cola, and Fried Okra.",
+        "Our specialities for today are Fish Tacos, Cola, and Fried Okra."
+      ]
+    }
+  ]
+}
