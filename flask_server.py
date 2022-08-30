@@ -13,7 +13,7 @@ try:
 	with open('chatbot/intents.json', 'r') as f:
 		intents = json.load(f)
 
-	FILE = "chatbot/data.pth"
+	FILE = "data.pth"
 	data = torch.load(FILE)
 
 	input_size = data["input_size"]
