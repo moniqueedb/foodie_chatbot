@@ -1,6 +1,4 @@
 from flask import Flask, render_template, jsonify, request
-import json
-import torch
 import response_generator
 from chatbot.app import NeuralNet
 
