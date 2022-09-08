@@ -1,9 +1,9 @@
 from flask import Flask, render_template, jsonify, request
-import random
 import json
 import torch
-from chatbot.nltk_utils import bag_of_words, tokenize
-from chatbot.model import NeuralNet
+import response_generator
+from chatbot.app import NeuralNet
+
 
 app = Flask(__name__)
 
@@ -46,7 +46,7 @@ def get_bot_response():
             message = request.args.get('msg')
             response = ""
             if message:
-                response = generate_responses.chatbot_msg(message)
+                response = response_generator.chatbot_msg(message)
                 return str(response)
 
             else:
