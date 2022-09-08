@@ -33,36 +33,25 @@ except Exception as e:
 
 @app.route('/')
 def home():
-	return render_template('index.html')
+    return render_template('index.html')
 
 
-@app.route('/chatbot', methods=["POST"])
-def chatbot_msg():
-	if request.method == "POST":
-		user_data = request.json
+@app.route('/chatbot', methods=["GET","POST"])
+def get_bot_response():
+    if request.method == "POST":
+            user_data = request.json
 
-		sentence = user_data['msg']
-	
-		sentence = tokenize(sentence)
-		X = bag_of_words(sentence, all_words)
-		X = X.reshape(1, X.shape[0])
-		X = torch.from_numpy(X)
+            sentence = user_data['msg']
 
-		output = model(X)
-		_, predicted = torch.max(output, dim=1)
-		tag = tags[predicted.item()]
-		probs = torch.softmax(output, dim=1)
-		prob = probs[0][predicted.item()]
+            message = request.args.get('msg')
+            response = ""
+            if message:
+                response = generate_responses.chatbot_msg(message)
+                return str(response)
 
-		if prob.item() > 0.75:
-			for intent in intents["intents"]:
-				if tag == intent["tag"]:
-			
-					return jsonify(msg=random.choice(intent['responses']))
-		else:
-			return jsonify(msg="I do not understand...")
+            else:
+                return "I do not understand. Please try again."
 
 
-
-if __name__ == '__main__':
-	app.run(port=5000, debug=True)
+if __name__=="__main__":
+    app.run(debug=True)
