@@ -14,9 +14,6 @@ def home():
 @app.route('/chatbot', methods=["GET","POST"])
 def get_bot_response():
     if request.method == "POST":
-            user_data = request.json
-
-            sentence = user_data['msg']
 
             message = request.args.get('msg')
             response = ""
