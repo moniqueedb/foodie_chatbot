@@ -3,7 +3,7 @@ from chatbot.nltk_utils import bag_of_words, tokenize, stem
 import torch
 import json
 from chatbot.model import NeuralNet
-from chatbot.chat import device, all_words, model, tags, intents, bot_name
+from chatbot.app import device, all_words, model, tags, intents, bot_name
 import random
 
 
