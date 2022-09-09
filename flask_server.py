@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 import response_generator
-from chatbot.app import NeuralNet
+
 
 
 app = Flask(__name__)
