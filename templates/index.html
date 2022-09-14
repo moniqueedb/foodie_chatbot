@@ -3,46 +3,50 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="static/style.css" />
-        <!-- 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icon.min.css"> -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha512-mRuH7OxetZB1XiSaKZ2fxENKgxVvx3ffpzX0FUcaP6GBqAuqOLc8YiC/3EVTUVt5p5mIRT5D9i4LitZUQKWNCg==" crossorigin="anonymous" />
-            <title>Chat Window</title>
-    
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <title>Foodie Chatbot</title>
         </head>
         <body>
-            
-    
             <section>
                 <br>
                 <br>
-                <h1>Hi, I'm FoodieBot</h1>
-                <h3>Chatbot using PyTorch</h3>
-                <p>Click on the chat button to start chatting</p>
-                
-    
+                <h1>Welcome to Foodie Restaurant! </h1>
+
+            <div class="chatbox">
+                <div>
                 <button class="chat-btn">
-                    <!-- used google material icon for comment -->
-                    <i class="material-icons">
-                        comment
-                    </i>
+                    <img src="{{ url_for('static', filename='icon-chatbot.PNG') }}" />
                 </button>
+                </div>
+
     
                 <!-- pop up -->
                 <div class="chat-popup">
+
+                    <div class="chatbox__header">
+                        <div class="chatbox__image--header">
+                            <img src="static/icon-chatbot.PNG" alt="image">
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4> FoodieBot </h4>
+                            <p class="chatbox__description--header">Hi. My name is Foodie. How can I help you? </p>
+                        </div>
+                    </div>
+        
                     <!-- start red chat badge -->
                     <div class="badge">1</div>
     
                     <!-- inside chat box area -->
                     <div class="chat-area" id="chatId">
                         <div class="income-msg">
-                            <!-- <img src="static/img/tom.jpeg" class="avatar" alt=""> -->
-                            <span class="msg">start typing....</span>
+                            <img src="static/icon-chatbot.PNG" alt="image">
+                            <span class="msg">Start typing....</span>
                         </div>
                     </div>
     
                     <!-- input area into chat -->
                     <div class="input-area">
-                        <input type="text" tabindex="-1">
+                        <input type="text" (keyup.enter)= "sendit($event.target.value)" tabindex="-1"/>
                         <button class="submit">
                             <i class="material-icons">
                                 send
@@ -50,8 +54,11 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            <h3>Click on the chat button to start chatting</h3>
             </section>
     
+            
     
             <!-- javascript libraries -->
             <script type="text/javascript" src="static/main.js"></script>

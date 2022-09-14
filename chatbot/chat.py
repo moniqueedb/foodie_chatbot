@@ -25,7 +25,7 @@ model.eval()
 
 
 # chat
-bot_name = "R2D2"
+bot_name = "Foodie Bot"
 print("Let's chat! type 'quit' to exit")
 while True:
     sentence = input('You: ')
