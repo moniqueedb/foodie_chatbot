@@ -41,10 +41,10 @@ Modify intents.json with different intents and responses for your Chatbot
 
 $ (venv) python update_punkt_train.py
 
-This file allows the user to input command line arguments. Arguments can be written in any order after the file name.
-For first-time users, please download the nltk punkt package by running the following >>> python update_punkt_train.py punkt
-To train the model, run >>> python update_punkt_train.py train
-To download punkt AND train, run >>> python update_punkt_train.py punkt train
+* This file allows the user to input command line arguments. Arguments can be written in any order after the file name.
+* For first-time users, please download the nltk punkt package by running the following ```python update_punkt_train.py punkt```
+* To train the model, run: ```python update_punkt_train.py train```
+* To download punkt AND train, run: ```python update_punkt_train.py punkt train```
 
 
 $ (venv) python app.py
