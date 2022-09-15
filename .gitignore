@@ -247,4 +247,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Bot model training data
+*.pth
+
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,macos,windows
