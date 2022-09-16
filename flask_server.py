@@ -11,9 +11,11 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/chatbot', methods=["GET","POST"])
+@app.route('/get', methods=["GET","POST"])
 def get_bot_response():
-    if request.method == "POST":
+    return('Hello')
+'''
+	if request.method == "POST":
 
             message = request.args.get('msg')
             response = ""
@@ -23,7 +25,7 @@ def get_bot_response():
 
             else:
                 return "I do not understand. Please try again."
-
+'''
 
 if __name__=="__main__":
     app.run(debug=True)
