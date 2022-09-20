@@ -11,9 +11,9 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/get', methods=["GET","POST"])
+@app.route('/chatbot', methods=["GET","POST"])
 def get_bot_response():
-    return('Hello')
+    return jsonify(msg='Hello')
 '''
 	if request.method == "POST":
 
