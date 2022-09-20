@@ -1,5 +1,7 @@
-from flask import Flask, render_template, jsonify, request
-import response_generator
+from email import message
+from flask import Flask, render_template, request, jsonify
+from chatbot.chat import chat_response
+import os
 
 
 
@@ -13,19 +15,21 @@ def home():
 
 @app.route('/chatbot', methods=["GET","POST"])
 def get_bot_response():
-    return jsonify(msg='Hello')
-'''
-	if request.method == "POST":
+    if request.method == "POST":
+        #return jsonify(msg="Hello")
 
-            message = request.args.get('msg')
-            response = ""
-            if message:
-                response = response_generator.chatbot_msg(message)
-                return str(response)
+        user_data = request.json
 
-            else:
-                return "I do not understand. Please try again."
-'''
+        message = user_data['msg']
+
+        response = ""
+        if message:
+            response = chat_response(message)
+            return jsonify(msg=str(response)
+)
+        else:
+            return "Missing data!"
+
 
 if __name__=="__main__":
     app.run(debug=True)
