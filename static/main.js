@@ -5,6 +5,19 @@ const chatArea = document.querySelector('.chat-area');
 const inputElm = document.querySelector('input');
 const chatUrl = '/chatbot';
 
+window.onload = function () {
+	document.body.onkeydown = function (event) {
+		if (event.key === 'Enter') {
+			let userInput = inputElm.value;
+			if(userInput.length > 0)
+			{
+				submitBtn.click();
+			}
+			return false;
+		}
+	}
+};
+
 
 // Chat button toggler
 chatBtn.addEventListener('click', () => {
