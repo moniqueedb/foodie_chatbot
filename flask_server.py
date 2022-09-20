@@ -1,7 +1,6 @@
 from email import message
 from flask import Flask, render_template, request, jsonify
 from chatbot.chat import chat_response
-import os
 
 
 
