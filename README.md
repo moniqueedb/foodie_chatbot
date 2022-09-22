@@ -2,12 +2,12 @@
 
 ![image](https://user-images.githubusercontent.com/104881370/191832408-c31d16f4-07a1-4b70-a23f-923476800442.png)
 
-Foodie Chatbot is a deep-learning chatbot designed to help restaurants attract and engage with their patrons. Customers can ask questions about the restaurant's hours, menu, special offerrings (e.g. vegetarian and vegan options), payment methods, and more. The chatbot was created using a PyTorch model and Flask-based UI.
+Foodie Chatbot is a deep-learning chatbot designed to help restaurants attract and engage with their patrons. Customers can ask questions about the restaurant's hours, menu, special offerings (e.g. vegetarian and vegan options), payment methods, and more. The chatbot was created using a PyTorch model and Flask-based UI.
 
 ### Installation and Set-up
 
 1. Install python (version 3.6.13 is compatible; other versions may also be used)
-2. Set up virtual environment with the packages included in the requirements.txt file. We recommend running: ```pip install -r requirements.txt```
+2. Set up virtual environment with the packages included in the 'requirements.txt' file. We recommend running: ```pip install -r requirements.txt```
 4. Install the nltk punkt package: ```python update_punkt_train.py punkt```
 5. Clone the github repository using GitBash ```git clone https://github.com/python-engineer/foodie_chatbot.git``` or using any other method.
 
@@ -15,9 +15,9 @@ Foodie Chatbot is a deep-learning chatbot designed to help restaurants attract a
 The chatbot is trained based on the intents.json file. Training the model produces a data.pth file, which is needed for the chatbot to generate responses.
 
 1. To train the model, run: ```python update_punkt_train.py train```
-2. Simply running ```python update_punkt_train.py``` will return the response, "Retraining is not required."
+2. Simply running ```python update_punkt_train.py``` will return the response, "Re-training is not required."
 
-OPTIONAL: Modify intents.json with different intents and responses for your restaurant chatbot. The chatbot must be retrained each time changes are made to the intents.json file.
+OPTIONAL: Modify intents.json with customized intents and responses for your restaurant chatbot. The chatbot must be retrained each time changes are made to the 'intents.json' file.
 
 ### Run the Flask App
 
