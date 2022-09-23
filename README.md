@@ -8,8 +8,10 @@ Foodie Chatbot is a deep-learning chatbot designed to help restaurants attract a
 
 1. Install python (version 3.6.13 is compatible; other versions may also be used)
 2. Clone the github repository using GitBash ```git clone https://github.com/moniqueedb/foodie_chatbot.git``` or using any other method.
-3. Set up virtual environment with the packages included in the 'requirements.txt' file. We recommend running: ```pip install -r requirements.txt```
-4. Install the nltk punkt package: ```python update_punkt_train.py punkt```
+3. Create a virtual environment. ``` python -m venv myvenv ```
+4. Activate your virtual environment. ```source myvenv/Scripts/activate```
+5. Set up virtual environment with the packages included in the 'requirements.txt' file. We recommend running: ```pip install -r requirements.txt```
+6. Install the nltk punkt package: ```python update_punkt_train.py punkt```
 
 ### Train the Model
 The chatbot is trained based on the 'intents.json' file. Training the model produces a 'data.pth' file, which is needed for the chatbot to generate responses.
